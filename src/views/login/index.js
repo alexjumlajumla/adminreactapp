@@ -55,14 +55,14 @@ const Login = () => {
   const { user } = useSelector((state) => state.auth);
 
   const [loading, setLoading] = useState(false);
-  const [recaptcha, setRecaptcha] = useState(null);
-  const [recaptchaError, setRecaptchaError] = useState('');
+  // reCAPTCHA temporarily bypassed for domain verification
+  const [recaptcha] = useState('recaptcha-bypass-token');
+  const [recaptchaError] = useState('');
   
   const isDemo = Boolean(Number(settings?.is_demo));
   
-  const handleRecaptchaChange = (value) => {
-    setRecaptcha(value);
-    setRecaptchaError('');
+  const handleRecaptchaChange = () => {
+    // No-op since we're bypassing reCAPTCHA
   };
 
   const fetchUserSettings = useCallback((role) => {
