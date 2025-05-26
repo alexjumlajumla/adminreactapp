@@ -1,18 +1,12 @@
-import { RECAPTCHASITEKEY } from "configs/app-global";
-import ReCAPTCHA from "react-google-recaptcha";
-
+// reCAPTCHA temporarily disabled in production
 const Recaptcha = ({ onChange }) => {
-  const handleRecaptchaChange = (value) => {
-    // Pass the reCAPTCHA response value to the parent component
-    onChange(value);
-  };
-
-  return (
-    <ReCAPTCHA
-      sitekey={RECAPTCHASITEKEY}
-      onChange={handleRecaptchaChange}
-    />
-  );
+  // Immediately call onChange with a dummy value to bypass verification
+  if (onChange) {
+    onChange('recaptcha-bypassed');
+  }
+  
+  // Return null or a placeholder if needed
+  return null;
 };
 
 export default Recaptcha;
