@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkgithubit_dashboard=self.webpackChunkgithubit_dashboard||[]).push([[4432],{34432:(s,t,a)=>{a.r(t),a.d(t,{default:()=>h});a(47313);var d=a(97890),u=a(30130),e=a(46417);const h=()=>{const{id:s}=(0,d.UO)();return(0,e.jsx)(u.Z,{id:s})}}}]);

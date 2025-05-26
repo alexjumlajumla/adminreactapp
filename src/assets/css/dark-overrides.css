@@ -1,0 +1,127 @@
+/* Dark overrides */
+:root[data-theme='dark'] {
+  --app-bg: #000000;
+  --card-bg: #111111;
+  --header-bg: #000000;
+  --border-color: #1f1f1f;
+  --text-strong: #e4e4e4;
+  --text-regular: #c0c0c0;
+  --text-muted: #888888;
+  --brand-primary: #fbc618;
+  --brand-secondary: #003466;
+  --btn-primary-bg: var(--brand-primary);
+  --btn-primary-color: #000;
+  --link-color: var(--brand-primary);
+}
+
+[data-theme='dark'] {
+  background: var(--app-bg);
+  color: var(--text-regular);
+}
+
+[data-theme='dark'] .ant-layout,
+[data-theme='dark'] .ant-layout-content {
+  background: var(--app-bg);
+}
+
+[data-theme='dark'] .ant-card,
+[data-theme='dark'] .ant-modal-content {
+  background: var(--card-bg);
+  color: var(--text-regular);
+}
+
+[data-theme='dark'] .ant-card-head-title,
+[data-theme='dark'] h1,
+[data-theme='dark'] h2,
+[data-theme='dark'] h3,
+[data-theme='dark'] h4 {
+  color: var(--text-strong);
+}
+
+[data-theme='dark'] .ant-btn-primary {
+  background: var(--btn-primary-bg);
+  border-color: var(--btn-primary-bg);
+  color: var(--btn-primary-color);
+}
+
+[data-theme='dark'] a { color: var(--link-color); }
+
+/* Scrollbars */
+[data-theme='dark'] ::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+[data-theme='dark'] ::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 4px;
+}
+
+/* Sidebar Menu */
+[data-theme='dark'] .ant-menu,
+[data-theme='dark'] .ant-menu-inline,
+[data-theme='dark'] .ant-menu-vertical {
+  background: var(--header-bg);
+}
+
+[data-theme='dark'] .ant-menu-item,
+[data-theme='dark'] .ant-menu-submenu-title {
+  color: var(--text-regular);
+}
+
+[data-theme='dark'] .ant-menu-item:hover,
+[data-theme='dark'] .ant-menu-submenu-title:hover {
+  background: rgba(255,255,255,0.04);
+  color: var(--brand-primary);
+}
+
+[data-theme='dark'] .ant-menu-item-selected  {
+  background: var(--brand-secondary) !important;
+  color: #fff !important;
+}
+
+[data-theme='dark'] .ant-menu-item-selected a {
+  color: #fff !important;
+}
+
+[data-theme='dark'] .ant-pagination-item-active a {
+  color: var(--brand-primary);
+}
+
+/* Layout containers */
+[data-theme='dark'] .ant-layout-header,
+[data-theme='dark'] .ant-layout-sider,
+[data-theme='dark'] .ant-layout-footer {
+  background: var(--header-bg);
+  color: var(--text-regular);
+}
+
+/* Drawer */
+[data-theme='dark'] .ant-drawer-body,
+[data-theme='dark'] .ant-drawer-header,
+[data-theme='dark'] .ant-drawer-content {
+  background: var(--card-bg);
+  color: var(--text-regular);
+}
+
+/* Lists / description / statistic */
+[data-theme='dark'] .ant-list,
+[data-theme='dark'] .ant-list-item,
+[data-theme='dark'] .ant-descriptions-view,
+[data-theme='dark'] .ant-statistic,
+[data-theme='dark'] .ant-timeline-item-content {
+  background: var(--card-bg);
+  color: var(--text-regular);
+}
+
+[data-theme='dark'] .ant-result,
+[data-theme='dark'] .ant-empty {
+  background: var(--card-bg);
+  color: var(--text-regular);
+}
+
+/* Steps */
+[data-theme='dark'] .ant-steps,
+[data-theme='dark'] .ant-steps-item-container {
+  background: var(--card-bg);
+  color: var(--text-regular);
+} 

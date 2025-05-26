@@ -1,0 +1,10 @@
+/* Broadcast editor tweaks */
+.quill-broadcast-editor .ql-editor {
+  min-height: 300px;
+  max-height: 600px;
+  overflow-y: auto;
+}
+.quill-broadcast-editor {
+  width: 100%;
+  overflow-x: auto;
+} 
