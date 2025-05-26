@@ -1,0 +1,17 @@
+/* ReCAPTCHA styles */
+.recaptcha-wrapper {
+  margin: 16px 0;
+  display: flex;
+  justify-content: center;
+  min-height: 78px; /* Minimum height to prevent layout shift */
+}
+
+/* Adjust the reCAPTCHA iframe size if needed */
+.grecaptcha-badge { 
+  visibility: visible !important;
+}
+
+/* For dark mode support */
+[data-theme="dark"] .g-recaptcha iframe {
+  filter: invert(1) hue-rotate(180deg);
+}
