@@ -18,7 +18,8 @@ import { setUserData } from 'redux/slices/auth';
 import { fetchRestSettings, fetchSettings } from 'redux/slices/globalSettings';
 import { useTranslation } from 'react-i18next';
 import { PROJECT_NAME } from 'configs/app-global';
-import Recaptcha from 'components/recaptcha';
+// reCAPTCHA temporarily disabled
+// import Recaptcha from 'components/recaptcha';
 import { setMenu } from 'redux/slices/menu';
 import { webSocketService } from 'services/websocket';
 const { Title } = Typography;
@@ -55,13 +56,10 @@ const Login = () => {
   const { user } = useSelector((state) => state.auth);
 
   const [loading, setLoading] = useState(false);
-  const [recaptcha, setRecaptcha] = useState(null);
+  // reCAPTCHA temporarily disabled
+  const recaptcha = 'bypassed';
 
   const isDemo = Boolean(Number(settings?.is_demo));
-
-  const handleRecaptchaChange = (value) => {
-    setRecaptcha(value);
-  };
 
   const fetchUserSettings = useCallback((role) => {
     switch (role) {
@@ -189,7 +187,9 @@ const Login = () => {
                           placeholder='Password'
                         />
                       </Form.Item>
+                      {/* reCAPTCHA temporarily disabled
                       <Recaptcha onChange={handleRecaptchaChange} />
+                      */}
                       <Form.Item className='login-input mt-4'>
                         <Button
                           type='primary'
