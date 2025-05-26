@@ -1,2 +1,1 @@
-# foodyman_admin
 # adminreactapp
