@@ -1,7 +1,7 @@
 // project settings, you can change only PROJECT_NAME, BASE_URL and WEBSITE_URL otherwise it can break the app
 export const PROJECT_NAME = 'MsosiJumla marketplace';
-export const BASE_URL ='https://mapi.jumlajumla.com';
-export const WEBSITE_URL = 'https://msosi.jumlajumla.com';
+export const BASE_URL ='https://dev.jumlajumla.com';
+export const WEBSITE_URL = 'https://beta.jumlajumla.com';
 export const api_url = BASE_URL + '/api/v1/';
 export const api_url_admin = BASE_URL + '/api/v1/dashboard/admin/';
 export const api_url_admin_dashboard = BASE_URL + '/api/v1/dashboard/';
