@@ -1,0 +1,2 @@
+# foodyman_admin
+# adminreactapp
