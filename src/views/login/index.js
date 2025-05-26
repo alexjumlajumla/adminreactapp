@@ -55,10 +55,15 @@ const Login = () => {
   const { user } = useSelector((state) => state.auth);
 
   const [loading, setLoading] = useState(false);
-  // reCAPTCHA is now handled by the modified Recaptcha component
   const [recaptcha, setRecaptcha] = useState(null);
+  const [recaptchaError, setRecaptchaError] = useState('');
   
   const isDemo = Boolean(Number(settings?.is_demo));
+  
+  const handleRecaptchaChange = (value) => {
+    setRecaptcha(value);
+    setRecaptchaError('');
+  };
 
   const fetchUserSettings = useCallback((role) => {
     switch (role) {
@@ -186,7 +191,12 @@ const Login = () => {
                           placeholder='Password'
                         />
                       </Form.Item>
-                      <Recaptcha onChange={setRecaptcha} />
+                      <Recaptcha onChange={handleRecaptchaChange} />
+                      {recaptchaError && (
+                        <div className="ant-form-item-explain-error">
+                          {recaptchaError}
+                        </div>
+                      )}
                       <Form.Item className='login-input mt-4'>
                         <Button
                           type='primary'

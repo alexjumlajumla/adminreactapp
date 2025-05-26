@@ -1,10 +1,13 @@
+import { API_BASE_URL } from './config.js';
+
 // project settings, you can change only PROJECT_NAME, BASE_URL and WEBSITE_URL otherwise it can break the app
 export const PROJECT_NAME = 'MsosiJumla marketplace';
-export const BASE_URL ='https://dev.jumlajumla.com';
+export const BASE_URL = API_BASE_URL;
 export const WEBSITE_URL = 'https://beta.jumlajumla.com';
-export const api_url = BASE_URL + '/api/v1/';
-export const api_url_admin = BASE_URL + '/api/v1/dashboard/admin/';
-export const api_url_admin_dashboard = BASE_URL + '/api/v1/dashboard/';
+// Ensure proper URL construction with trailing slashes
+export const api_url = API_BASE_URL.endsWith('/') ? API_BASE_URL + 'v1/' : API_BASE_URL + '/v1/';
+export const api_url_admin = api_url + 'dashboard/admin/';
+export const api_url_admin_dashboard = api_url + 'dashboard/';
 export const IMG_URL = '';
 export const export_url = BASE_URL + '/storage/';
 export const example = BASE_URL + '/';
@@ -24,7 +27,7 @@ export const APP_ID = '1:853837987746:web:b0d822859c3a2605893cfb';
 export const MEASUREMENT_ID = 'G-YSYTD7ESL8';
 
 // recaptcha key, you can get it from https://www.google.com/recaptcha/admin/create
-export const RECAPTCHASITEKEY = '6LdE0bQpAAAAAIGyCKAQT8y11wD8knf1vXbjgkpV';
+export const RECAPTCHASITEKEY = '6LdFVXAqAAAAAPQqvH2F5FSczHh8FY02Pwbhyj61';
 
 // demo data, no need to change
 export const LAT = 6.3690;
