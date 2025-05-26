@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkjumlajumla_dashboard=self.webpackChunkjumlajumla_dashboard||[]).push([[6356],{16356:(a,u,s)=>{s.r(u),s.d(u,{default:()=>r});var d=s(63672),e=s(13564),l=s(54594),t=s(44414);const r=()=>{const{id:a}=(0,e.g)();return(0,t.jsx)(l.A,{handleSubmit:u=>d.A.update(a,u)})}}}]);
