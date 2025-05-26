@@ -40,7 +40,7 @@ import ParcelOrderRoutes from './admin/parcelOrder';
 import Advert from './admin/advert';
 import ShopAds from './admin/shop-ads';
 import PaymentToPartnersRoutes from './admin/payment-to-partners';
-import VfdRoutes from './admin/vfd';
+import { vfdRoutes as VfdRoutes } from './admin/vfd';
 import LoanRoutes from './admin/loan';
 import BroadcastRoutes from './admin/broadcast';
 import TripRoutes from './admin/trip';
