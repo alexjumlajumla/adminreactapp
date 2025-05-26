@@ -2,12 +2,14 @@ import { API_BASE_URL } from './config.js';
 
 // project settings, you can change only PROJECT_NAME, BASE_URL and WEBSITE_URL otherwise it can break the app
 export const PROJECT_NAME = 'MsosiJumla marketplace';
-export const BASE_URL = API_BASE_URL;
+
+export const BASE_URL = API_BASE_URL.endsWith('/') ? API_BASE_URL.slice(0, -1) : API_BASE_URL;
 export const WEBSITE_URL = 'https://beta.jumlajumla.com';
-// Ensure proper URL construction with trailing slashes
-export const api_url = API_BASE_URL.endsWith('/') ? API_BASE_URL + 'v1/' : API_BASE_URL + '/v1/';
-export const api_url_admin = api_url + 'dashboard/admin/';
-export const api_url_admin_dashboard = api_url + 'dashboard/';
+
+// API endpoints
+export const api_url = `${BASE_URL}/api/v1/`;
+export const api_url_admin = `${api_url}dashboard/admin/`;
+export const api_url_admin_dashboard = `${api_url}dashboard/`;
 export const IMG_URL = '';
 export const export_url = BASE_URL + '/storage/';
 export const example = BASE_URL + '/';
